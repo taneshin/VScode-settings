@@ -1,0 +1,76 @@
+{
+    "workbench.colorTheme": "Monokai",
+    "python.formatting.provider": "black",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.terminal.activateEnvironment": false,
+    "python.pythonPath": "/Users/eshin/.pyenv/shims/python",
+
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk",
+            "tools": ["cd_to_cwd", "latexmk"]
+        },
+        {
+            "name": "xelatex",
+            "tools": ["cd_to_cwd", "xelatex"]
+        },
+        {
+            "name": "pdflatex -> bibtex -> pdflatex*2",
+            "tools": ["cd_to_cwd", "pdflatex", "bibtex", "pdflatex", "pdflatex"]
+        },
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "cd_to_cwd",
+            "command": "cd",
+            "args": ["%DIR%"]
+        },
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-xelatex",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": ["%DOCFILE%"]
+        }
+    ],
+    "editor.minimap.enabled": false,
+    "editor.wordWrap": "on",
+    "workbench.startupEditor": "newUntitledFile",
+    "git.path": "/usr/bin/git",
+    "code-runner.runInTerminal": true,
+    "latex-workshop.message.update.show": false,
+    "git.confirmSync": false,
+}
