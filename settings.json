@@ -17,15 +17,57 @@
             "tools": ["cd_to_cwd", "xelatex"]
         },
         {
+            "name": "pdflatex",
+            "tools": ["cd_to_cwd", "pdflatex"]
+        },
+        {
+            "name": "pdflatex -> biber -> pdflatex*2",
+            "tools": [
+                "cd_to_cwd",
+                "pdflatex",
+                "biber",
+                "pdflatex",
+                "pdflatex"
+            ]
+        },
+        {
             "name": "pdflatex -> bibtex -> pdflatex*2",
-            "tools": ["cd_to_cwd", "pdflatex", "bibtex", "pdflatex", "pdflatex"]
+            "tools": [
+                "cd_to_cwd",
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "xelatex -> biber -> xelatex*2",
+            "tools": [
+                "cd_to_cwd",
+                "xelatex",
+                "biber",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "xelatex -> bibtex -> xelatex*2",
+            "tools": [
+                "cd_to_cwd",
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
         },
     ],
     "latex-workshop.latex.tools": [
         {
             "name": "cd_to_cwd",
             "command": "cd",
-            "args": ["%DIR%"]
+            "args": [
+                "%DIR%"
+            ]
         },
         {
             "name": "latexmk",
@@ -57,13 +99,22 @@
                 "-synctex=1",
                 "-interaction=nonstopmode",
                 "-file-line-error",
-                "%DOCFILE%"
+                "%DOC%"
             ]
         },
         {
             "name": "bibtex",
             "command": "bibtex",
-            "args": ["%DOCFILE%"]
+            "args": [
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+                "%DOCFILE%"
+            ]
         }
     ],
     "editor.minimap.enabled": false,
@@ -73,4 +124,14 @@
     "code-runner.runInTerminal": true,
     "latex-workshop.message.update.show": false,
     "git.confirmSync": false,
+    "cSpell.language": "en-GB,en",
+    "cSpell.enableFiletypes": [
+        "!python"
+    ],
+    "cSpell.userWords": [
+        "Factiva",
+        "SCMP",
+        "globalised",
+        "metaphorised"
+    ],
 }
