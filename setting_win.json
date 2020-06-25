@@ -1,0 +1,84 @@
+{
+    "latex-workshop.view.pdf.viewer": "tab",
+    "workbench.colorTheme": "Monokai",
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "none",
+    "latex-workshop.latex.recipes":
+    [
+        {
+          "name": "latexmk 🔃",
+          "tools": [
+            "latexmk"
+          ]
+        },
+        {
+          "name": "pdflatex ➞ bibtex ➞ pdflatex`×2",
+          "tools": [
+            "pdflatex",
+            "bibtex",
+            "pdflatex",
+            "pdflatex"
+          ]
+        }
+    ],
+    "latex-workshop.latex.tools":
+    [
+        {
+          "name": "latexmk",
+          "command": "latexmk",
+          "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "-pdf",
+            "-outdir=%OUTDIR%",
+            "%DOC%"
+          ],
+        },
+        {
+          "name": "pdflatex",
+          "command": "pdflatex",
+          "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "%DOC%"
+          ],
+        },
+        {
+          "name": "bibtex",
+          "command": "bibtex",
+          "args": [
+            "%DOCFILE%"
+          ],
+        }
+    ],
+    "workbench.startupEditor": "newUntitledFile",
+    "python.pythonPath": "C:\\Users\\E-shin\\anaconda3\\python.exe",
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "editor.wordWrap": "on",
+    "cSpell.language": "en-GB,en",
+    "cSpell.enableFiletypes": [
+        "!python"
+    ],
+    "cSpell.userWords": [
+        "Factiva",
+        "SCMP",
+        "globalised",
+        "metaphorised"
+    ],
+    "launch": {
+    
+    
+    },
+    "explorer.confirmDelete": false,
+    "java.home": "C:\\Users\\E-shin\\AppData\\Local\\Programs\\AdoptOpenJDK",
+    "java.help.firstView": "gettingStarted",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false,
+    "python.dataScience.sendSelectionToInteractiveWindow": false,
+    "python.languageServer": "Microsoft",
+}
